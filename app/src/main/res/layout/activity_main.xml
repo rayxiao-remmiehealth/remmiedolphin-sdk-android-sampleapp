@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4E4645"
+    android:keepScreenOn="true"
+    android:theme="@style/Theme.RemmieTestAppForSDK"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#4E4645"
+        android:theme="@style/Theme.RemmieTestAppForSDK"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="640dp"
+            android:layout_height="394dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/black" />
+
+        <TextView
+            android:id="@+id/txtVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version 1.1.0.0"
+            android:textColor="#FFFFFF" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="181dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="-131dp"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/getPermissionsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:backgroundTint="#C6BEBE"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Get Permissions"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/scanWifiButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Scan Wifi"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/getWifiListButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Get Wifi List"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Ap Mode"
+                        android:textColor="@color/white" />
+
+
+
+                    <Button
+                        android:id="@+id/connectToOtoscopeInApMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Connect Otoscope in Ap Mode"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/homeWifiButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Home Wifi list Using Otoscope API"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Dual Mode"
+                        android:textColor="@color/white" />
+
+
+
+                    <Button
+                        android:id="@+id/connectOtoscopeClientModeButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Connect in Client Mode"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/rediscoveryButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Rediscover Device"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Control"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/configureOtoscopeFirstTimeButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="First Time NSD Config"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+
+
+<!--                    <Button-->
+<!--                        android:id="@+id/reconnectOtoscope"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:backgroundTint="#231F1F"-->
+<!--                        android:paddingLeft="2dp"-->
+<!--                        android:paddingRight="2dp"-->
+<!--                        android:text="(re)connect otoscope in whatever mode"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:visibility="visible" />-->
+
+                    <Button
+                        android:id="@+id/startStreamingButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Start Streaming"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/startRecordingButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Start Recording"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/stopRecordingButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Stop Recording"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/takePictureButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#231F1F"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Take Picture"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/stopStreamButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#AE2626"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Stop Stream"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/disconnectButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#AE2626"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Disconnect Device"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/innerImageHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="events" />
+
+                <EditText
+                    android:id="@+id/event_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/innerScrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginBottom="40dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Is Otoscope AP"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/isLoginReadySignifier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/btn_radio"
+                    app:tint="#FF0000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Connected Oto AP"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/isCnctOtoApSignifier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/btn_radio"
+                    app:tint="#FF0000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+
+                    android:id="@+id/status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Unknown"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/isStreamReadySignifier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/btn_radio"
+                    app:tint="#FF0000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/OtoSSIDtext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="-34dp"
+            android:text="Otoscope SSID: "
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/CurrSSIDtext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView"
+            android:layout_alignParentEnd="false"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="-60dp"
+            android:text="Current SSID: "
+            android:textColor="#FFFFFF" />
+
+        <!---
+    <TextView
+        android:id="@+id/loggingText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="-90dp"
+        android:text="Current SSID: "
+        android:textColor="#FFFFFF"
+        android:visibility="gone" />
+        -->
+
+        <ImageView
+            android:id="@+id/pictureButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="-99dp"
+            android:layout_marginEnd="99dp"
+            app:srcCompat="@drawable/capture" />
+
+        <ImageView
+            android:id="@+id/recordButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/imageView"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-99dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/record" />
+
+        <TextView
+            android:id="@+id/retryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:background="#FFFFFF"
+            android:text="Click either streaming button to restart video streaming"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
+</ScrollView>
